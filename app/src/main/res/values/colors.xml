@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background">#FFDAB9</color>
+    <color name="pastel1">#FBC4AB</color>
+    <color name="pastel2">#F8AD9D</color>
+    <color name="pastel3">#F4978E</color>
+    <color name="pastel4">#F08080</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
