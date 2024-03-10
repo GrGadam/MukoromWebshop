@@ -11,11 +11,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bejelentkezés"
+        android:text="@string/login"
         android:textSize="40sp"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textColor="@color/black"
+        android:textColor="@color/pastel5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,17 +27,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Felhasználónév"
+        android:text="@string/username"
         android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textColor="@color/black"
+        android:textColor="@color/pastel5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="230sp"
-        android:layout_marginRight="200sp"
+        android:layout_marginEnd="200sp"
         />
 
     <EditText
@@ -51,22 +51,27 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/username"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:textColorHint="@color/pastel4"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jelszó"
+        android:text="@string/password"
         android:textSize="20sp"
         android:textStyle="bold"
         android:typeface="normal"
-        android:textColor="@color/black"
+        android:textColor="@color/pastel5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="70sp"
-        android:layout_marginRight="280sp"
+        android:layout_marginEnd="280sp"
         />
 
     <EditText
@@ -80,7 +85,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/password"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:textColorHint="@color/pastel4"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginButton"
@@ -89,7 +99,7 @@
         android:layout_marginTop="150sp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/pastel3"
-        android:text="Bejelentkezés"
+        android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:typeface="normal"
@@ -103,16 +113,16 @@
         android:layout_width="350sp"
         android:layout_height="50sp"
         android:layout_marginTop="270sp"
-        android:backgroundTint="@color/pastel3"
         android:background="@drawable/rounded_button"
-        android:text="Regisztráció"
+        android:backgroundTint="@color/pastel3"
+        android:onClick="showRegisterActivity"
+        android:text="@string/registration"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
