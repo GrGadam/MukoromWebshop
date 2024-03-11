@@ -154,7 +154,7 @@
         android:autofillHints="password" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/emailEditText"
         android:layout_width="350sp"
         android:layout_height="50sp"
         android:layout_marginTop="120sp"
