@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".LoginActivity"
     android:background="@color/background"
     >
 
@@ -56,7 +56,7 @@
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
         android:textColorHint="@color/pastel4"
-        />
+        android:autofillHints="username" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
         android:paddingStart="10sp"
         android:paddingEnd="10sp"
         android:textColorHint="@color/pastel4"
-        />
+        android:autofillHints="password" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginButton"
@@ -115,7 +115,6 @@
         android:layout_marginTop="270sp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/pastel3"
-        android:onClick="showRegisterActivity"
         android:text="@string/registration"
         android:textColor="@color/white"
         android:textSize="24sp"
