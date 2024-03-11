@@ -13,4 +13,5 @@
     <string name="registration">Regisztráció</string>
     <string name="passwordAgain">Jelszó ismét</string>
     <string name="email">E-mail</string>
+    <string name="haveAccount">Van már fiókja?</string>
 </resources>
