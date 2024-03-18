@@ -1,12 +1,15 @@
 package io.github.grgadam.mukoromwebshop;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.widget.AppCompatButton;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends Activity {
 
@@ -16,6 +19,8 @@ public class RegisterActivity extends Activity {
     EditText emailEditText;
     AppCompatButton registerButton;
     AppCompatButton loginButton;
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,8 @@ public class RegisterActivity extends Activity {
             usernameEditText.setText(extras.getString("username"));
         }
 
+        mAuth = FirebaseAuth.getInstance();
+
     }
 
     private void showLoginActivity(View view) {
@@ -49,7 +56,23 @@ public class RegisterActivity extends Activity {
     }
 
     private void register(View view) {
-        //TODO
+        String email = emailEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+        String passwordAgain = passwordAgainEditText.getText().toString();
+
+        if (password.equals(passwordAgain)) {
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
+                if (task.isSuccessful()) {
+                    //TODO
+                    //startActivity(new Intent(this, MainActivity.class));
+                } else {
+                    new AlertDialog.Builder(RegisterActivity.this).setTitle("Hiba").setMessage("Váratlan hiba történt.").setPositiveButton("Ok", null).show();
+                }
+            });
+        } else {
+            new AlertDialog.Builder(RegisterActivity.this).setTitle("Hiba").setMessage("A jelszavak nem egyeznek!").setPositiveButton("Ok", null).show();
+        }
+
     }
 
 }

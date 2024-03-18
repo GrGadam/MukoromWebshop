@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1056105849478",
+    "project_id": "mukoromwebshop-77cba",
+    "storage_bucket": "mukoromwebshop-77cba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056105849478:android:75a98b318ba4b3ca8b2707",
+        "android_client_info": {
+          "package_name": "io.github.grgadam.mukoromwebshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl9FO_a9wmWRzXsysdIJorflXXRN-ULIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
