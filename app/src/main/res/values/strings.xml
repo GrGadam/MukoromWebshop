@@ -14,4 +14,10 @@
     <string name="passwordAgain">Jelszó ismét</string>
     <string name="email">E-mail</string>
     <string name="haveAccount">Van már fiókja?</string>
+    <string name="title_activity_shoppping">ShopppingActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_shopping">ShoppingActivity</string>
+    <string name="dontHaveAccount">Nincs még fiókja?</string>
 </resources>

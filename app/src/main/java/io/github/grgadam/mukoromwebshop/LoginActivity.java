@@ -10,7 +10,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText usernameEditText;
+    EditText emailEditText;
     EditText passwordEditText;
     AppCompatButton loginButton;
     AppCompatButton registerButton;
@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //get elements
-        usernameEditText = findViewById(R.id.usernameEditText);
+        emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
         registerButton = findViewById(R.id.regsiterButton);
@@ -36,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     public void showRegisterActivity(View view) {
         Intent showRegisterIntent = new Intent(this, RegisterActivity.class);
 
-        if (!usernameEditText.getText().toString().isEmpty()) {
-            showRegisterIntent.putExtra("username", usernameEditText.getText().toString());
+        if (!emailEditText.getText().toString().isEmpty()) {
+            showRegisterIntent.putExtra("email", emailEditText.getText().toString());
         }
 
         startActivity(showRegisterIntent);

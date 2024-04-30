@@ -13,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends Activity {
 
-    EditText usernameEditText;
     EditText passwordEditText;
     EditText passwordAgainEditText;
     EditText emailEditText;
@@ -28,10 +27,9 @@ public class RegisterActivity extends Activity {
         setContentView(R.layout.activity_register);
 
         //get elements
-        usernameEditText = findViewById(R.id.usernameEditText);
+        emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         passwordAgainEditText = findViewById(R.id.passwordAgainEditText);
-        emailEditText = findViewById(R.id.emailEditText);
         registerButton = findViewById(R.id.regsiterButton);
         loginButton = findViewById(R.id.loginButton);
 
@@ -44,7 +42,7 @@ public class RegisterActivity extends Activity {
         //autofill username
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            usernameEditText.setText(extras.getString("username"));
+            emailEditText.setText(extras.getString("email"));
         }
 
         mAuth = FirebaseAuth.getInstance();
