@@ -13,7 +13,7 @@
         android:id="@+id/regsiterButton"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginTop="270sp"
+        android:layout_marginTop="300sp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/pastel3"
         android:text="@string/registration"
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="550sp"
+        android:layout_marginBottom="500sp"
         android:text="@string/registration"
         android:textColor="@color/pastel5"
         android:textSize="40sp"
@@ -43,7 +43,7 @@
         android:id="@+id/emailEditText"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginTop="120sp"
+        android:layout_marginBottom="250sp"
         android:autofillHints="emailAddress"
         android:background="@drawable/rounded_input"
         android:hint="@string/email"
@@ -54,16 +54,14 @@
         android:textColorHint="@color/pastel4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="230sp"
-        android:layout_marginBottom="110sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="234dp"
         android:text="@string/passwordAgain"
         android:textColor="@color/pastel5"
         android:textSize="20sp"
@@ -71,16 +69,14 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.595" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginBottom="200sp"
+        android:layout_marginBottom="70sp"
         android:autofillHints="password"
         android:background="@drawable/rounded_input"
         android:hint="@string/password"
@@ -91,16 +87,14 @@
         android:textColorHint="@color/pastel4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="270sp"
-        android:layout_marginBottom="270sp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginBottom="294sp"
         android:text="@string/password"
         android:textColor="@color/pastel5"
         android:textSize="20sp"
@@ -117,7 +111,7 @@
         android:id="@+id/passwordAgainEditText"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginBottom="40sp"
+        android:layout_marginTop="120sp"
         android:autofillHints="password"
         android:background="@drawable/rounded_input"
         android:hint="@string/passwordAgain"
@@ -128,16 +122,14 @@
         android:textColorHint="@color/pastel4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
-        android:layout_marginEnd="280sp"
+        android:layout_marginEnd="291dp"
+        android:layout_marginBottom="330sp"
         android:text="@string/email"
         android:textColor="@color/pastel5"
         android:textSize="20sp"
@@ -145,10 +137,8 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -161,7 +151,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="430sp"
+        android:layout_marginTop="420sp"
         />
 
     <androidx.appcompat.widget.AppCompatButton

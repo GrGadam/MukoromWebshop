@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="340sp"
+        android:layout_marginBottom="500sp"
         android:text="@string/login"
         android:textColor="@color/pastel5"
         android:textSize="40sp"
@@ -21,14 +21,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginBottom="0sp"
+        android:layout_marginBottom="30sp"
         android:autofillHints="password"
         android:background="@drawable/rounded_input"
         android:hint="@string/password"
@@ -39,16 +38,14 @@
         android:textColorHint="@color/pastel4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="200sp"
-        android:layout_marginBottom="230sp"
+        android:layout_marginEnd="290sp"
+        android:layout_marginBottom="330sp"
         android:text="@string/email"
         android:textColor="@color/pastel5"
         android:textSize="20sp"
@@ -56,16 +53,15 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginTop="120sp"
+        android:layout_marginTop="0sp"
+        android:layout_marginBottom="250sp"
         android:autofillHints="emailAddress"
         android:background="@drawable/rounded_input"
         android:hint="@string/email"
@@ -76,16 +72,14 @@
         android:textColorHint="@color/pastel4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="280sp"
-        android:layout_marginBottom="70sp"
+        android:layout_marginEnd="285sp"
+        android:layout_marginBottom="110sp"
         android:text="@string/password"
         android:textColor="@color/pastel5"
         android:textSize="20sp"
@@ -93,10 +87,8 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginButton"
@@ -111,15 +103,13 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.476" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="430sp"
+        android:layout_marginTop="270sp"
         android:text="@string/dontHaveAccount"
         android:textColor="@color/pastel5"
         android:textSize="16sp"
@@ -127,14 +117,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.387" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/regsiterButton"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginTop="270sp"
+        android:layout_marginTop="350sp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/pastel3"
         android:text="@string/registration"
@@ -143,9 +132,7 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
