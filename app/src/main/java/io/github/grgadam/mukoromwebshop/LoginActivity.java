@@ -93,18 +93,13 @@ public class LoginActivity extends AppCompatActivity implements LifecycleObserve
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Hiba");
             builder.setMessage("Üres e-mail/jelszó!");
-            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
+            builder.setPositiveButton("Ok", (dialog, which) -> dialog.dismiss());
+            builder.show();
+        } else {
+            //TODO check successful login
+            Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);
+            startActivity(showShoppingIntent);
         }
-
-
-        //TODO check successful login
-        Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);
-        startActivity(showShoppingIntent);
     }
 
     @Override
