@@ -95,8 +95,8 @@
         android:id="@+id/passwordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="270dp"
-        android:layout_marginBottom="294sp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="150sp"
         android:text="@string/password"
         android:textColor="@color/pastel5"
         android:textSize="20sp"
@@ -104,10 +104,8 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/passwordAgainEditText"
@@ -144,7 +142,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/haveAccountTextView"
+        android:id="@+id/loginTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/haveAccount"
