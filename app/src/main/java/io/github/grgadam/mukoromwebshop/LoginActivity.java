@@ -8,11 +8,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.lifecycle.LifecycleObserver;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements LifecycleObserver {
 
     EditText emailEditText;
     EditText passwordEditText;
@@ -86,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void login(View view) {
-        
+
     }
 
     @Override
@@ -98,4 +100,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(this, "Kérjük, jelentkezzen be vagy regisztráljon", Toast.LENGTH_SHORT).show();
+    }
+
 }
