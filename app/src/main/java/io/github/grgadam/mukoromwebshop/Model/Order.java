@@ -9,6 +9,8 @@ public class Order {
     private String address;
     private Map<String, Integer> items;
 
+    public Order() {}
+
     public Order(String id, String email, String address, Map<String, Integer> items) {
         this.id = id;
         this.email = email;

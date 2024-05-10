@@ -9,6 +9,8 @@ public class Item {
     private int price;
     private int count;
 
+    public Item() {}
+
     public Item(String id, String name, String type, String color, int price, int count) {
         this.id = id;
         this.name = name;

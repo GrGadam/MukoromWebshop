@@ -17,10 +17,6 @@
             android:exported="false"
             android:label="@string/title_activity_shopping" />
         <activity
-            android:name=".ShopppingActivity"
-            android:exported="false"
-            android:label="@string/title_activity_shoppping" />
-        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
