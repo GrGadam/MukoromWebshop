@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -15,6 +18,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText passwordEditText;
     AppCompatButton loginButton;
     AppCompatButton registerButton;
+
+    TextView emailTextView;
+    TextView passwordTextView;
+    TextView registerTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +40,33 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
-        //get elements
+        //animacio betoltese
+        Animation slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
+
+
+        //EditTexts
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
+
+        //Buttons
         loginButton = findViewById(R.id.loginButton);
         registerButton = findViewById(R.id.regsiterButton);
+
+        //TextViews
+        emailTextView = findViewById(R.id.emailTextView);
+        passwordTextView = findViewById(R.id.passwordTextView);
+        registerTextView = findViewById(R.id.registerTextView);
+
+
+        //animacio inditasa
+        emailEditText.startAnimation(slideUp);
+        passwordEditText.startAnimation(slideUp);
+        loginButton.startAnimation(slideUp);
+        registerButton.startAnimation(slideUp);
+        emailTextView.startAnimation(slideUp);
+        passwordTextView.startAnimation(slideUp);
+        registerTextView.startAnimation(slideUp);
+
 
         //register Button send to register Activity
         registerButton.setOnClickListener(this::showRegisterActivity);
@@ -57,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void login(View view) {
-
+        
     }
 
     @Override
