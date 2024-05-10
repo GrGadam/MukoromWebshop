@@ -1,5 +1,7 @@
 package io.github.grgadam.mukoromwebshop;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -42,10 +44,6 @@ public class LoginActivity extends AppCompatActivity implements LifecycleObserve
 
         setContentView(R.layout.activity_login);
 
-        //animacio betoltese
-        Animation slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
-
-
         //EditTexts
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
@@ -59,6 +57,9 @@ public class LoginActivity extends AppCompatActivity implements LifecycleObserve
         passwordTextView = findViewById(R.id.passwordTextView);
         registerTextView = findViewById(R.id.registerTextView);
 
+
+        //animacio betoltese
+        Animation slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
 
         //animacio inditasa
         emailEditText.startAnimation(slideUp);
@@ -88,7 +89,22 @@ public class LoginActivity extends AppCompatActivity implements LifecycleObserve
     }
 
     private void login(View view) {
+        if (emailEditText.getText().toString().isEmpty() || passwordEditText.getText().toString().isEmpty()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Hiba");
+            builder.setMessage("Üres e-mail/jelszó!");
+            builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+        }
 
+
+        //TODO check successful login
+        Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);
+        startActivity(showShoppingIntent);
     }
 
     @Override

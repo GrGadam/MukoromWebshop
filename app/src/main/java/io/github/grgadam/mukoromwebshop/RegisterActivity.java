@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -19,6 +22,11 @@ public class RegisterActivity extends Activity {
     EditText emailEditText;
     AppCompatButton registerButton;
     AppCompatButton loginButton;
+
+    TextView emailTextView;
+    TextView passwordTextView;
+    TextView passwordAgainTextView;
+    TextView loginTextView;
 
     private FirebaseAuth mAuth;
 
@@ -39,12 +47,20 @@ public class RegisterActivity extends Activity {
 
         setContentView(R.layout.activity_register);
 
-        //get elements
+        //EditTexts
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         passwordAgainEditText = findViewById(R.id.passwordAgainEditText);
+
+        //Buttons
         registerButton = findViewById(R.id.regsiterButton);
         loginButton = findViewById(R.id.loginButton);
+
+        //TextViews
+        emailTextView = findViewById(R.id.emailTextView);
+        passwordTextView = findViewById(R.id.passwordTextView);
+        passwordAgainTextView = findViewById(R.id.passwordAgainTextView);
+        loginTextView = findViewById(R.id.loginTextView);
 
         //login Button send to Login Activity
         loginButton.setOnClickListener(this::showLoginActivity);
@@ -60,6 +76,23 @@ public class RegisterActivity extends Activity {
 
         mAuth = FirebaseAuth.getInstance();
 
+
+        //animacio betoltese
+        Animation fadeIn = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+        //animacio inditasa
+        emailTextView.startAnimation(fadeIn);
+        emailEditText.startAnimation(fadeIn);
+
+        passwordTextView.startAnimation(fadeIn);
+        passwordEditText.startAnimation(fadeIn);
+
+        passwordAgainTextView.startAnimation(fadeIn);
+        passwordAgainEditText.startAnimation(fadeIn);
+
+        loginButton.startAnimation(fadeIn);
+        loginTextView.startAnimation(fadeIn);
+        registerButton.startAnimation(fadeIn);
     }
 
     private void showLoginActivity(View view) {
