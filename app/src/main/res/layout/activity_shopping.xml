@@ -12,6 +12,7 @@
         android:background="@color/pastel2">
 
         <ImageView
+            android:id="@+id/profileImageView"
             android:src="@drawable/user"
             android:layout_width="50sp"
             android:layout_height="50sp"
@@ -19,6 +20,7 @@
             android:contentDescription="@string/profile" />
 
         <ImageView
+            android:id="@+id/cartImageView"
             android:src="@drawable/cart"
             android:layout_gravity="end"
             android:layout_width="50sp"

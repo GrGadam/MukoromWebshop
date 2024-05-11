@@ -126,10 +126,6 @@ public class LoginActivity extends AppCompatActivity implements LifecycleObserve
                             }
                         }
                     });
-
-            //TODO check successful login
-            Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);
-            startActivity(showShoppingIntent);
         }
     }
 
@@ -147,7 +143,7 @@ public class LoginActivity extends AppCompatActivity implements LifecycleObserve
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser == null){
+        if (currentUser == null) {
             Toast.makeText(this, "Kérjük, jelentkezzen be vagy regisztráljon", Toast.LENGTH_SHORT).show();
         } else {
             Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);

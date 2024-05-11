@@ -1,13 +1,18 @@
 package io.github.grgadam.mukoromwebshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ShoppingActivity extends AppCompatActivity {
+
+    private ImageView profileImageView;
+    private ImageView cartImageView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,6 +27,13 @@ public class ShoppingActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(getColor(R.color.pastel2));
 
         setContentView(R.layout.activity_shopping);
+
+        //ImageViews
+        profileImageView = findViewById(R.id.profileImageView);
+        cartImageView = findViewById(R.id.cartImageView);
+
+        //Listeners
+        profileImageView.setOnClickListener(this::showProfile);
     }
 
     @Override
@@ -32,6 +44,11 @@ public class ShoppingActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    private void showProfile(View view) {
+        Intent showShoppingIntent = new Intent(this, ProfileActivity.class);
+        startActivity(showShoppingIntent);
     }
 
 }

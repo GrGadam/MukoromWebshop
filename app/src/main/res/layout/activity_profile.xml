@@ -16,7 +16,8 @@
         android:layout_height="50sp" />
 
     <TextView
-        android:text="valaki@gmail.com"
+        android:id="@+id/profileEmailTextView"
+        android:text=""
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150sp"
         android:textSize="25sp"

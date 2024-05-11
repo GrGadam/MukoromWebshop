@@ -17,6 +17,10 @@
             android:exported="false"
             android:label="@string/title_activity_shopping" />
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
