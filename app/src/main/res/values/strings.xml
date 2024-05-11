@@ -20,4 +20,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_shopping">ShoppingActivity</string>
     <string name="dontHaveAccount">Nincs még fiókja?</string>
+    <string name="profile">profile</string>
+    <string name="cart">cart</string>
 </resources>

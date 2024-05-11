@@ -16,15 +16,15 @@
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:layout_margin="5sp"
-            android:contentDescription="profile" />
+            android:contentDescription="@string/profile" />
 
         <ImageView
             android:src="@drawable/cart"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:layout_margin="5sp"
-            android:contentDescription="cart" />
+            android:contentDescription="@string/cart" />
 
     </GridLayout>
 
