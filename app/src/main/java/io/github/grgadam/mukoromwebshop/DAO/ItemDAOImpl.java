@@ -1,12 +1,8 @@
 package io.github.grgadam.mukoromwebshop.DAO;
 
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.google.api.core.ApiFuture;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +11,11 @@ import io.github.grgadam.mukoromwebshop.Model.Item;
 
 public class ItemDAOImpl implements ItemDAO {
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static ItemDAOImpl object = new ItemDAOImpl();
+    public static ItemDAOImpl getInstance() {
+        return object;
+    }
 
     @Override
     public void add(Item item) {
@@ -44,6 +44,8 @@ public class ItemDAOImpl implements ItemDAO {
             if (task.isSuccessful()) {
                 for (DocumentSnapshot document : task.getResult()) {
                     Item taskItem = document.toObject(Item.class);
+                    assert taskItem != null;
+                    taskItem.setId(document.getId());
                     list.add(taskItem);
                 }
             }

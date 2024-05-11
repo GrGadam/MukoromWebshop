@@ -30,4 +30,57 @@
 
     </GridLayout>
 
+    <RelativeLayout
+        android:id="@+id/itemsRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60sp">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_marginTop="5sp">
+
+            <ImageView
+                android:layout_margin="2sp"
+                android:layout_width="96sp"
+                android:layout_height="96sp"
+                android:src="@drawable/user" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/idt1"
+                    android:textSize="24sp"
+                    android:text="Körömlakk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp" />
+
+                <TextView
+                    android:id="@+id/idt2"
+                    android:textSize="20sp"
+                    android:text="Szín: kék"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:layout_below="@id/idt1"/>
+
+                <TextView
+                    android:textSize="20sp"
+                    android:text="Ár: 2500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:layout_below="@id/idt2"/>
+
+            </RelativeLayout>
+        </GridLayout>
+
+
+    </RelativeLayout>
+
 </RelativeLayout>
