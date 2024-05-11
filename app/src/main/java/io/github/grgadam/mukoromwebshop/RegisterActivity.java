@@ -3,9 +3,10 @@ package io.github.grgadam.mukoromwebshop;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
@@ -34,16 +35,19 @@ public class RegisterActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //ertesitessav es navbar eltuntetese
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //hide status bar
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        //hide navbar
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+
+        //ertesites sav hatter beallit
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getWindow().setStatusBarColor(getColor(R.color.background));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            getWindow().getAttributes().layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+        }
 
         setContentView(R.layout.activity_register);
 
@@ -104,17 +108,25 @@ public class RegisterActivity extends Activity {
         String password = passwordEditText.getText().toString();
         String passwordAgain = passwordAgainEditText.getText().toString();
 
-        if (password.equals(passwordAgain)) {
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
-                if (task.isSuccessful()) {
-                    //TODO
-                    //startActivity(new Intent(this, MainActivity.class));
-                } else {
-                    new AlertDialog.Builder(RegisterActivity.this).setTitle("Hiba").setMessage("Váratlan hiba történt.").setPositiveButton("Ok", null).show();
-                }
-            });
+        if (email.isEmpty() || password.isEmpty() || passwordAgain.isEmpty()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Hiba");
+            builder.setMessage("Üres e-mail/jelszó!");
+            builder.setPositiveButton("Ok", (dialog, which) -> dialog.dismiss());
+            builder.show();
         } else {
-            new AlertDialog.Builder(RegisterActivity.this).setTitle("Hiba").setMessage("A jelszavak nem egyeznek!").setPositiveButton("Ok", null).show();
+            if (password.equals(passwordAgain)) {
+                mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);
+                        startActivity(showShoppingIntent);
+                    } else {
+                        new AlertDialog.Builder(RegisterActivity.this).setTitle("Hiba").setMessage("Váratlan hiba történt.").setPositiveButton("Ok", null).show();
+                    }
+                });
+            } else {
+                new AlertDialog.Builder(RegisterActivity.this).setTitle("Hiba").setMessage("A jelszavak nem egyeznek!").setPositiveButton("Ok", null).show();
+            }
         }
 
     }
