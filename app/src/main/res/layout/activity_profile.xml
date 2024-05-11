@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    >
+    
+    <TextView
+        android:text="@string/fiok"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp" />
+
+    <TextView
+        android:text="valaki@gmail.com"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150sp"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logoutButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="200sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <TextView
+        android:text="@string/rendelesek"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300sp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp" />
+
+</RelativeLayout>

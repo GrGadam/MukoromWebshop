@@ -22,4 +22,7 @@
     <string name="dontHaveAccount">Nincs még fiókja?</string>
     <string name="profile">profile</string>
     <string name="cart">cart</string>
+    <string name="fiok">Fiók</string>
+    <string name="logout">Kijelentkezés</string>
+    <string name="rendelesek">Rendelések</string>
 </resources>
