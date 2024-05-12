@@ -28,7 +28,7 @@ public class ShoppingActivity extends AppCompatActivity {
 
     private ImageView profileImageView;
     private ImageView cartImageView;
-    private RelativeLayout itemsRelativeLayout;
+    private LinearLayout itemsLinearLayout;
     private CollectionReference itemCollection;
     private ArrayList<Item> items;
 
@@ -53,7 +53,7 @@ public class ShoppingActivity extends AppCompatActivity {
         cartImageView = findViewById(R.id.cartImageView);
 
         //RelativeLayouts
-        itemsRelativeLayout = findViewById(R.id.itemsRelativeLayout);
+        itemsLinearLayout = findViewById(R.id.itemsLinearLayout);
 
         //Listeners
         profileImageView.setOnClickListener(this::showProfile);
@@ -86,6 +86,7 @@ public class ShoppingActivity extends AppCompatActivity {
 
     private void showItems() {
         int layout_count = 0;
+        int eltolas = 0;
         for (Item i : items) {
             LayoutInflater li = getLayoutInflater();
             View dynamicView = li.inflate(R.layout.dynamic_item_view, null);
@@ -132,7 +133,7 @@ public class ShoppingActivity extends AppCompatActivity {
             });
 
 
-            itemsRelativeLayout.addView(dynamicView);
+            itemsLinearLayout.addView(dynamicView);
         }
     }
 
