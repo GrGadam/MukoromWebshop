@@ -61,7 +61,7 @@ public class ShoppingActivity extends AppCompatActivity {
 
         //Show items
         items.clear();
-        itemCollection.get().addOnSuccessListener(queryDocumentSnapshots -> {
+        itemCollection.limit(50).get().addOnSuccessListener(queryDocumentSnapshots -> {
             for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                 Item i = document.toObject(Item.class);
                 assert i != null;
