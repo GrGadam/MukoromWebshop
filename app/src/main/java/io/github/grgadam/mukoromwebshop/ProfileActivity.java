@@ -15,7 +15,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ProfileActivity  extends Activity {
+public class ProfileActivity extends Activity {
     private FirebaseAuth mAuth;
     private ImageView backImageView;
     private TextView profileEmailTextView;

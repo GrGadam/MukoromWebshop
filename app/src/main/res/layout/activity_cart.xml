@@ -11,7 +11,7 @@
         android:background="@color/pastel2">
 
         <ImageView
-            android:id="@+id/backImageView"
+            android:id="@+id/backImageViewCart"
             android:src="@drawable/arrow_back"
             android:layout_width="50sp"
             android:layout_height="50sp"
@@ -21,7 +21,7 @@
     </GridLayout>
 
     <TextView
-        android:text="@string/fiok"
+        android:text="@string/kosar"
         android:textColor="@color/black"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100sp"
@@ -30,43 +30,37 @@
         android:layout_width="wrap_content"
         android:layout_height="50sp" />
 
-    <TextView
-        android:id="@+id/profileEmailTextView"
-        android:text=""
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
+    <ListView
+        android:id="@+id/cartListView"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
         android:layout_marginTop="150sp"
-        android:textSize="25sp"
-        android:layout_width="wrap_content"
-        android:layout_height="50sp" />
+        android:background="@color/pastel4"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logoutButton"
+        android:id="@+id/deleteCartButton"
         android:layout_centerHorizontal="true"
         android:layout_width="350sp"
         android:layout_height="50sp"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="500sp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/pastel3"
-        android:text="@string/logout"
+        android:text="@string/deleteCart"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:typeface="normal" />
 
-    <TextView
-        android:text="@string/rendelesek"
-        android:textColor="@color/black"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sumbitOrderButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300sp"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="50sp" />
-
-    <RelativeLayout
-        android:id="@+id/rendelesRelativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="380sp" />
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="600sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/submitOrder"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
 
 </RelativeLayout>

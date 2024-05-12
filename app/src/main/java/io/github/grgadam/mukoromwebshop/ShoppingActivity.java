@@ -57,6 +57,7 @@ public class ShoppingActivity extends AppCompatActivity {
 
         //Listeners
         profileImageView.setOnClickListener(this::showProfile);
+        cartImageView.setOnClickListener(this::showCart);
 
         //Show items
         items.clear();
@@ -85,6 +86,12 @@ public class ShoppingActivity extends AppCompatActivity {
         Intent showShoppingIntent = new Intent(this, ProfileActivity.class);
         startActivity(showShoppingIntent);
     }
+
+    private void showCart(View view) {
+        Intent showShoppingIntent = new Intent(this, CartActivity.class);
+        startActivity(showShoppingIntent);
+    }
+
 
     private void showItems() {
         int layout_count = 0;
@@ -142,5 +149,7 @@ public class ShoppingActivity extends AppCompatActivity {
         spEditor.putInt(id, ertek);
         spEditor.apply();
     }
+
+
 
 }

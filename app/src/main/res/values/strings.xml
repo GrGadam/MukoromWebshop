@@ -25,4 +25,8 @@
     <string name="logout">Kijelentkezés</string>
     <string name="rendelesek">Rendelések</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="kosar">Kosár</string>
+    <string name="deleteCart">Kosár törlése</string>
+    <string name="submitOrder">Rendelés leadása</string>
+    <string name="title_activity_cart">Cart Activity</string>
 </resources>
