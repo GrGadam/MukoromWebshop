@@ -1,9 +1,14 @@
 package io.github.grgadam.mukoromwebshop;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -12,7 +17,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -42,6 +51,13 @@ public class CartActivity extends Activity {
         items = new ArrayList<>();
         item = null;
         adapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
+
+        //ask for permission to show notifications
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 101);
+            }
+        }
 
         //-----STATUS AND NAVBAR-----
         //hide navbar
@@ -77,7 +93,9 @@ public class CartActivity extends Activity {
 
         //Listeners
         backImageViewCart.setOnClickListener(this::back);
-        deleteCartButton.setOnClickListener(this::deleteCart);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            deleteCartButton.setOnClickListener(this::deleteCart);
+        }
         sumbitOrderButton.setOnClickListener(this::showAddressActivity);
     }
 
@@ -103,11 +121,28 @@ public class CartActivity extends Activity {
         adapter.notifyDataSetChanged();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void deleteCart(View view) {
         SharedPreferences sp = getSharedPreferences("cart", Context.MODE_PRIVATE);
         sp.edit().clear().apply();
         Intent showShoppingIntent = new Intent(this, CartActivity.class);
         startActivity(showShoppingIntent);
+
+        //küldjünk róla értesítést
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "MUKOROM_NOTIFICATION_ID");
+        builder.setSmallIcon(R.drawable.cart)
+        .setContentTitle("Kosár tötölve")
+        .setContentText("A kosara törölve lett")
+        .setAutoCancel(true).setPriority(NotificationCompat.PRIORITY_LOW);
+
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationChannel notificationChannel;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            notificationChannel = new NotificationChannel("MUKOROM_NOTIFICATION_ID", "Mukorom notification channel", NotificationManager.IMPORTANCE_LOW);
+            nm.createNotificationChannel(notificationChannel);
+        }
+
+        nm.notify(0, builder.build());
     }
 
     private void showAddressActivity(View view) {
