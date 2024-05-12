@@ -2,10 +2,9 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100sp"
-    android:layout_marginTop="5sp"
+    android:layout_margin="1sp"
     android:background="@color/pastel1"
-    android:id="@+id/layout_0"
-    android:layout_weight="1">
+    android:id="@+id/layout_0">
 
     <ImageView
         android:layout_margin="2sp"
@@ -22,7 +21,7 @@
         <TextView
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:text="None"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2sp" />
@@ -30,7 +29,7 @@
         <TextView
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="None"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2sp" />
@@ -38,7 +37,7 @@
         <TextView
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="None"
+            android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="2sp" />

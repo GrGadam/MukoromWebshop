@@ -1,8 +1,11 @@
 package io.github.grgadam.mukoromwebshop;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +17,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -95,6 +101,7 @@ public class ShoppingActivity extends AppCompatActivity {
             //1. kép típus szerint
             GridLayout gl = dynamicView.findViewById(R.id.layout_0);
             gl.setId(View.generateViewId());
+
             layout_count++;
             ImageView iw = (ImageView) gl.getChildAt(0);
             switch (i.getType()) {
@@ -121,14 +128,27 @@ public class ShoppingActivity extends AppCompatActivity {
             //Onclick esemény beállítása
             ImageView kosarView = (ImageView) gl.getChildAt(2);
             kosarView.setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.N)
                 @Override
                 public void onClick(View v) {
-                    /*
                     SharedPreferences sp = getSharedPreferences("cart", Context.MODE_PRIVATE);
                     SharedPreferences.Editor spEditor = sp.edit();
-                    sp.getString(i.getId());
-                    spEditor.putString(i.getId(), );
-                     */
+                    int ertek = sp.getInt(i.getId(), 0);
+                    ertek ++;
+                    spEditor.putInt(i.getId(), ertek);
+
+
+                    //Üzenet küldése hogy sikeresen felvettük
+                    NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                        NotificationChannel nc = new NotificationChannel("mukorom_notification_channel", "Mukorom Ertesites", NotificationManager.IMPORTANCE_MIN);
+                        nm.createNotificationChannel(nc);
+                        NotificationCompat.Builder builder = new NotificationCompat.Builder(getBaseContext(), "mukorom_notification_channel")
+                                .setContentTitle("Műköröm Webshop")
+                                .setContentText("Kosárhoz adva: " + i.getName() + " (" + i.getColor() + ")")
+                                .setSmallIcon(R.drawable.to_cart);
+                        nm.notify(0, builder.build());
+                    }
                 }
             });
 
