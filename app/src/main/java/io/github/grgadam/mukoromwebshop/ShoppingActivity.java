@@ -154,8 +154,8 @@ public class ShoppingActivity extends AppCompatActivity {
     }
 
     private void showToolsActivity(View view) {
-        //Intent showShoppingIntent = new Intent(this, ToolsActivity.class);
-        //startActivity(showShoppingIntent);
+        Intent showShoppingIntent = new Intent(this, ToolsActivity.class);
+        startActivity(showShoppingIntent);
     }
 
 }

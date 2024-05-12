@@ -30,4 +30,8 @@
     <string name="submitOrder">Rendelés leadása</string>
     <string name="title_activity_cart">Cart Activity</string>
     <string name="tools">tools</string>
+    <string name="addItem">Termék hozzáadása</string>
+    <string name="deleteItem">Termék törlése</string>
+    <string name="updateItem">Termék módosítása</string>
+    <string name="title_activity_tools">Tools Activity</string>
 </resources>

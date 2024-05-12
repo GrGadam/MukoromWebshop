@@ -26,6 +26,10 @@
             android:exported="false"
             android:label="@string/title_activity_cart" />
         <activity
+            android:name=".ToolsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_tools" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>

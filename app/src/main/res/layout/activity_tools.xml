@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60sp"
+        android:background="@color/pastel2">
+
+        <ImageView
+            android:id="@+id/backImageViewTools"
+            android:src="@drawable/arrow_back"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:contentDescription="@string/profile" />
+
+    </GridLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addItemButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="100sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/addItem"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteItemButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="170sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/deleteItem"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/modifyItemButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="240sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/updateItem"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+
+</RelativeLayout>
