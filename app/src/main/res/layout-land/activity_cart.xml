@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60sp"
+        android:background="@color/pastel2">
+
+        <ImageView
+            android:id="@+id/backImageViewCart"
+            android:src="@drawable/arrow_back"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:contentDescription="@string/profile" />
+
+    </GridLayout>
+
+    <TextView
+        android:text="@string/kosar"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp" />
+
+    <ListView
+        android:id="@+id/cartListView"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_marginTop="100sp"
+        android:background="@color/pastel4"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteCartButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="240sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/deleteCart"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sumbitOrderButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="300sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/submitOrder"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+</RelativeLayout>

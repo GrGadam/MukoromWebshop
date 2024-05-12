@@ -12,6 +12,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -154,6 +155,7 @@ public class ShoppingActivity extends AppCompatActivity {
         ertek++;
         spEditor.putInt(id, ertek);
         spEditor.apply();
+        Toast.makeText(this, "Sikeresen kosárba helyezve!", Toast.LENGTH_SHORT).show();
     }
 
     private void showToolsActivity(View view) {

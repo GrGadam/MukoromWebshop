@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60sp"
+        android:background="@color/pastel2">
+
+        <ImageView
+            android:id="@+id/backImageViewToolsAdd"
+            android:src="@drawable/arrow_back"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:contentDescription="@string/profile" />
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:text="@string/hozz_ad_s"
+        android:textColor="@color/pastel5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/nevTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35sp"
+        android:layout_marginTop="80sp"
+        android:text="@string/term_k_neve"
+        android:textColor="@color/pastel5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+    <EditText
+        android:id="@+id/nevEditText"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="70sp"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/n_v"
+        android:inputType="text"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/pastel4"
+        android:layout_centerHorizontal="true"
+        android:autofillHints="name" />
+
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35sp"
+        android:layout_marginTop="140sp"
+        android:text="@string/r"
+        android:textColor="@color/pastel5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+    <EditText
+        android:id="@+id/arEditText"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="130sp"
+        android:autofillHints="phone"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/ar_hint"
+        android:inputType="number"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/pastel4"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/typeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35sp"
+        android:layout_marginTop="200sp"
+        android:text="@string/t_pus"
+        android:textColor="@color/pastel5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+    <EditText
+        android:id="@+id/tipusEditText"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="190sp"
+        android:autofillHints="name"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/type_hint"
+        android:inputType="text"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/pastel4"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/colorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35sp"
+        android:layout_marginTop="260sp"
+        android:text="@string/sz_n"
+        android:textColor="@color/pastel5"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+    <EditText
+        android:id="@+id/szinEditText"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="250sp"
+        android:autofillHints="name"
+        android:background="@drawable/rounded_input"
+        android:hint="@string/color_hint"
+        android:inputType="text"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/pastel4"
+        android:layout_centerHorizontal="true"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addItemButtonAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="315sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/add_item"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+</RelativeLayout>

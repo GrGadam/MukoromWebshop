@@ -95,7 +95,7 @@ public class AddItemActivity extends AppCompatActivity {
     }
 
     private void goBack(View view) {
-        Intent showShoppingIntent = new Intent(this, ShoppingActivity.class);
+        Intent showShoppingIntent = new Intent(this, ToolsActivity.class);
         startActivity(showShoppingIntent);
     }
 
