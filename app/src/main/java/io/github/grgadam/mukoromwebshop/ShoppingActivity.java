@@ -117,6 +117,9 @@ public class ShoppingActivity extends AppCompatActivity {
                 case "basegel":
                     iw.setImageResource(R.drawable.basegel);
                     break;
+                case "koromreszelo":
+                    iw.setImageResource(R.drawable.koromreszelo);
+                    break;
                 default:
                     iw.setImageResource(R.drawable.koromlakk);
             }

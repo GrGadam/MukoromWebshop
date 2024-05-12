@@ -25,7 +25,7 @@ public class DeleteItemActivity extends AppCompatActivity {
     private ImageView backImageViewToolsDelete;
     private Spinner itemSpinner;
     private AppCompatButton deleteitemButton;
-    ArrayList<String> listItems = new ArrayList<String>();
+    ArrayList<String> listItems = new ArrayList<>();
     ArrayAdapter<String> adapter;
 
 
