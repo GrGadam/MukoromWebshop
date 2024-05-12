@@ -1,12 +1,17 @@
 package io.github.grgadam.mukoromwebshop;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
-import io.github.grgadam.mukoromwebshop.Controller.ItemController;
 import io.github.grgadam.mukoromwebshop.Model.Item;
 
 public class ShoppingActivity extends AppCompatActivity {
@@ -58,6 +59,7 @@ public class ShoppingActivity extends AppCompatActivity {
         profileImageView.setOnClickListener(this::showProfile);
 
         //Show items
+        items.clear();
         itemCollection.get().addOnSuccessListener(queryDocumentSnapshots -> {
             for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                 Item i = document.toObject(Item.class);
@@ -83,8 +85,54 @@ public class ShoppingActivity extends AppCompatActivity {
     }
 
     private void showItems() {
+        int layout_count = 0;
         for (Item i : items) {
+            LayoutInflater li = getLayoutInflater();
+            View dynamicView = li.inflate(R.layout.dynamic_item_view, null);
 
+            //Beállítjuk az értékeket
+            //1. kép típus szerint
+            GridLayout gl = dynamicView.findViewById(R.id.layout_0);
+            gl.setId(View.generateViewId());
+            layout_count++;
+            ImageView iw = (ImageView) gl.getChildAt(0);
+            switch (i.getType()) {
+                case "koromlakk":
+                    iw.setImageResource(R.drawable.koromlakk);
+                    break;
+                default:
+                    iw.setImageResource(R.drawable.koromlakk);
+            }
+
+            LinearLayout ll = (LinearLayout) gl.getChildAt(1);
+            //2.Név
+            TextView nevText = (TextView) ll.getChildAt(0);
+            nevText.setText(i.getName());
+
+            //3.Szín
+            TextView szinText = (TextView) ll.getChildAt(1);
+            szinText.setText(i.getColor());
+
+            //4.Ár
+            TextView arText = (TextView) ll.getChildAt(2);
+            arText.setText(Integer.toString(i.getPrice()) + " Ft");
+
+            //Onclick esemény beállítása
+            ImageView kosarView = (ImageView) gl.getChildAt(2);
+            kosarView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    /*
+                    SharedPreferences sp = getSharedPreferences("cart", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor spEditor = sp.edit();
+                    sp.getString(i.getId());
+                    spEditor.putString(i.getId(), );
+                     */
+                }
+            });
+
+
+            itemsRelativeLayout.addView(dynamicView);
         }
     }
 

@@ -2,7 +2,6 @@ package io.github.grgadam.mukoromwebshop.DAO;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.api.core.ApiFuture;
 
 import java.util.ArrayList;
 import java.util.List;
