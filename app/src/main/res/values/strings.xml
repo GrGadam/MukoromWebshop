@@ -34,4 +34,14 @@
     <string name="deleteItem">Termék törlése</string>
     <string name="updateItem">Termék módosítása</string>
     <string name="title_activity_tools">Tools Activity</string>
+    <string name="hozz_ad_s">Hozzáadás</string>
+    <string name="term_k_neve">Termék neve</string>
+    <string name="n_v">Név</string>
+    <string name="r">Ár</string>
+    <string name="ar_hint">1234</string>
+    <string name="t_pus">Típus</string>
+    <string name="type_hint">koromlakk</string>
+    <string name="sz_n">Szín</string>
+    <string name="color_hint">kék</string>
+    <string name="add_item">Hozzáadás</string>
 </resources>

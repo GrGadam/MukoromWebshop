@@ -1,5 +1,7 @@
 package io.github.grgadam.mukoromwebshop.Model;
 
+import com.google.firebase.firestore.Exclude;
+
 public class Item {
     private String id;
     private String name;
@@ -18,6 +20,7 @@ public class Item {
         this.price = price;
     }
 
+    @Exclude
     public String getId() {
         return id;
     }
