@@ -61,6 +61,7 @@
         android:text="@string/submitOrder"
         android:textColor="@color/white"
         android:textSize="24sp"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:enabled="false"/>
 
 </RelativeLayout>
