@@ -29,4 +29,5 @@
     <string name="deleteCart">Kosár törlése</string>
     <string name="submitOrder">Rendelés leadása</string>
     <string name="title_activity_cart">Cart Activity</string>
+    <string name="tools">tools</string>
 </resources>

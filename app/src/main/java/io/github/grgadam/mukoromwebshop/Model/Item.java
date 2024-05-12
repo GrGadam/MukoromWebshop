@@ -7,17 +7,15 @@ public class Item {
     private String color;
 
     private int price;
-    private int count;
 
     public Item() {}
 
-    public Item(String id, String name, String type, String color, int price, int count) {
+    public Item(String id, String name, String type, String color, int price) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.color = color;
         this.price = price;
-        this.count = count;
     }
 
     public String getId() {
@@ -58,13 +56,5 @@ public class Item {
 
     public void setPrice(int price) {
         this.price = price;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 }

@@ -28,6 +28,7 @@ public class ShoppingActivity extends AppCompatActivity {
 
     private ImageView profileImageView;
     private ImageView cartImageView;
+    private ImageView toolsImageView;
     private LinearLayout itemsLinearLayout;
     private CollectionReference itemCollection;
     private ArrayList<Item> items;
@@ -51,6 +52,7 @@ public class ShoppingActivity extends AppCompatActivity {
         //ImageViews
         profileImageView = findViewById(R.id.profileImageView);
         cartImageView = findViewById(R.id.cartImageView);
+        toolsImageView = findViewById(R.id.toolsImageView);
 
         //RelativeLayouts
         itemsLinearLayout = findViewById(R.id.itemsLinearLayout);
@@ -58,6 +60,7 @@ public class ShoppingActivity extends AppCompatActivity {
         //Listeners
         profileImageView.setOnClickListener(this::showProfile);
         cartImageView.setOnClickListener(this::showCart);
+        toolsImageView.setOnClickListener(this::showToolsActivity);
 
         //Show items
         items.clear();
@@ -150,6 +153,9 @@ public class ShoppingActivity extends AppCompatActivity {
         spEditor.apply();
     }
 
-
+    private void showToolsActivity(View view) {
+        //Intent showShoppingIntent = new Intent(this, ToolsActivity.class);
+        //startActivity(showShoppingIntent);
+    }
 
 }
