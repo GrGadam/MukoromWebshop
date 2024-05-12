@@ -45,4 +45,6 @@
     <string name="color_hint">kék</string>
     <string name="add_item">Hozzáadás</string>
     <string name="t_rl_s">Törlés</string>
+    <string name="m_dos_t_s">Módosítás</string>
+    <string name="m_dos_t_s_title">Módosítás</string>
 </resources>
