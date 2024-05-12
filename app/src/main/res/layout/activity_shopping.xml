@@ -30,13 +30,18 @@
 
     </GridLayout>
 
-    <LinearLayout
-        android:id="@+id/itemsLinearLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60sp"
-        android:orientation="vertical">
+        android:layout_marginTop="60sp">
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/itemsLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
