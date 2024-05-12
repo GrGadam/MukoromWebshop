@@ -34,6 +34,10 @@
             android:exported="false"
             android:label="Add Item Activity" />
         <activity
+            android:name=".DeleteItemActivity"
+            android:exported="false"
+            android:label="Delete Item Activity" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>

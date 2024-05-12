@@ -68,7 +68,8 @@ public class ToolsActivity extends Activity {
     }
 
     private void showDeleteItemActivity(View view) {
-
+        Intent showShoppingIntent = new Intent(this, DeleteItemActivity.class);
+        startActivity(showShoppingIntent);
     }
 
     private void showModifyItemActivity(View view) {

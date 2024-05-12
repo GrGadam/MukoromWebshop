@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60sp"
+        android:background="@color/pastel2">
+
+        <ImageView
+            android:id="@+id/backImageViewToolsDelete"
+            android:src="@drawable/arrow_back"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:contentDescription="@string/profile" />
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:text="@string/t_rl_s"
+        android:textColor="@color/pastel5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:id="@+id/itemSpinner"
+        android:layout_marginTop="150sp"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/rounded_button"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteItemButton"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="250sp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/pastel3"
+        android:text="@string/t_rl_s"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="normal" />
+
+</RelativeLayout>

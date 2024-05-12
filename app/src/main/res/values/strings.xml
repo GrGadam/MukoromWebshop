@@ -44,4 +44,5 @@
     <string name="sz_n">Szín</string>
     <string name="color_hint">kék</string>
     <string name="add_item">Hozzáadás</string>
+    <string name="t_rl_s">Törlés</string>
 </resources>
